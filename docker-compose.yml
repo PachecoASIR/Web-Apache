@@ -15,7 +15,7 @@ services:
      - apache-data:/var/lib/docker/volumes/apache-data/_data
 
  bind9:
-   container_name: bind_pacheco
+   container_name: dns_pacheco
    image: internetsystemsconsortium/bind9:9.16
    networks:
       br02:
