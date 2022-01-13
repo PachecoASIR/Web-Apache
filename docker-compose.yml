@@ -21,7 +21,7 @@ services:
    
  asir_cliente:
    container_name: cliente_apache_pacheco
-   image: a
+   image: b
    ports:
     - 6901:6901
 volumes:
