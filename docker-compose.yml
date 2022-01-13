@@ -1,0 +1,33 @@
+version: "1.25.0"
+
+services:
+
+ apache:
+
+   container_name: apache_pacheco
+   image: httpd:latest
+   ports:
+     - 85:85
+   networks:
+      br02:
+        ipv4_address: 10.1.0.4
+   volumes:
+     - apache-data
+     
+ bind9:
+   container_name: bind_pacheco
+   image: internetsystemsconsortium/bind9:9.16
+
+   
+ asir_cliente:
+   container_name: cliente_apache_pacheco
+   image: a
+   ports:
+    - 6901:6901
+volumes:
+ apache-data:
+   external: true
+
+networks:
+  br02:
+    external: true 
