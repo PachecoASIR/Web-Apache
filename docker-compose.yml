@@ -12,18 +12,26 @@ services:
       br02:
         ipv4_address: 10.1.0.4
    volumes:
-     - apache-data
-     
+     - apache-data:/var/lib/docker/volumes/apache-data/_data
+
  bind9:
    container_name: bind_pacheco
    image: internetsystemsconsortium/bind9:9.16
-
-   
+   networks:
+      br02:
+        ipv4_address: 10.1.0.2
+   volumes:
+    - dns_web_apache:/var/lib/docker/volumes/dns_web_apache/_data
+  
  asir_cliente:
    container_name: cliente_apache_pacheco
    image: kasmnweb/desktop:1.9.0
    ports:
     - 6901:6901
+   networks:
+      br02:
+        ipv4_address: 10.1.0.7
+
 volumes:
  apache-data:
    external: true
