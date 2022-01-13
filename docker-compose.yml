@@ -21,7 +21,7 @@ services:
    
  asir_cliente:
    container_name: cliente_apache_pacheco
-   image: b
+   image: kasmnweb/desktop:1.9.0
    ports:
     - 6901:6901
 volumes:
