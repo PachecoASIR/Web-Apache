@@ -28,6 +28,8 @@ services:
    image: kasmweb/desktop:1.9.0
    ports:
     - 6901:6901
+   environment:
+    VCN_PW: "password"
    networks:
       br02:
         ipv4_address: 10.1.0.7
