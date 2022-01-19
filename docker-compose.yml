@@ -29,7 +29,7 @@ services:
    ports:
     - 6901:6901
    environment:
-    VCN_PW: "password"
+    VNC_PW: "password"
    networks:
       br02:
         ipv4_address: 10.1.0.7
