@@ -25,7 +25,7 @@ services:
   
  asir_cliente:
    container_name: cliente_apache_pacheco
-   image: kasmnweb/desktop:1.9.0
+   image: kasmweb/desktop:1.9.0
    ports:
     - 6901:6901
    networks:
@@ -34,6 +34,7 @@ services:
 
 volumes:
  apache-data:
+ dns_web_apache:
    external: true
 
 networks:
