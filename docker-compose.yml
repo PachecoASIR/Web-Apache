@@ -19,7 +19,7 @@ services:
    image: internetsystemsconsortium/bind9:9.16
    networks:
       br02:
-        ipv4_address: 10.1.0.2
+        ipv4_address: 10.1.0.2 
    volumes:
     - dns_web_apache:/var/lib/docker/volumes/dns_web_apache/_data
   
