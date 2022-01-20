@@ -12,7 +12,8 @@ services:
       br02:
         ipv4_address: 10.1.0.4
    volumes:
-     - apache-data:/var/lib/docker/volumes/apache-data/_data
+     - apache-data:/usr/local/apache2/conf
+     - apache-data2:/usr/local/apache2/htdocs
 
  bind9:
    container_name: dns_pacheco
@@ -35,6 +36,9 @@ services:
 
 volumes:
  apache-data:
+   external: true
+ apache-data2:
+   external: true
  dns_web_apache:
    external: true
 
