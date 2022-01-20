@@ -32,7 +32,6 @@ services:
     VNC_PW: "password"
    networks:
       br02:
-        ipv4_address: 10.1.0.7
 
 volumes:
  apache-data:
