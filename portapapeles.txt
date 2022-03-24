@@ -1,7 +1,0 @@
-volumes:
-    - dns_web_apache:/var/lib/docker/volumes/dns_web_apache/_data
-  
-   dns_web_apache:
-   external: true
-
-      external: true
